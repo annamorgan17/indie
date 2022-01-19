@@ -177,5 +177,9 @@ public class StoreScript : MonoBehaviour
     public void ResetPurch()
     {
         SharedData.ResetData();
+        egyptText.text = "Buy";
+        robotText.text = "Buy";
+        unicornText.text = "Buy";
+        blueText.text = "Unlock";
     }
 }
