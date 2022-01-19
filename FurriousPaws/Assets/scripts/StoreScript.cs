@@ -144,6 +144,7 @@ public class StoreScript : MonoBehaviour
             SharedData.MilkAmount -= 10;
             SharedData.CatSkin = skinNum;
             SharedData.UnlockSkin[skinNum] = 1;
+            SharedData.SaveData();
         }
         else
         {
@@ -171,5 +172,10 @@ public class StoreScript : MonoBehaviour
         yield return new WaitForSeconds(3.0f);
         warningText.text = null;
         warningPage.SetActive(false);
+    }
+
+    public void ResetPurch()
+    {
+        SharedData.ResetData();
     }
 }

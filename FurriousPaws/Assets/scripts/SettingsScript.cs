@@ -16,6 +16,7 @@ public class SettingsScript : MonoBehaviour
         if (slider != null)
         {
             SharedData.MusicVol = slider.value;
+            SharedData.SaveData();
         }
     }
 }

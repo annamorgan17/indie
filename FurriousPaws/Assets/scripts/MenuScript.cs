@@ -10,6 +10,11 @@ public class MenuScript : MonoBehaviour
     private void Start()
     {
         music = GetComponent<AudioSource>();
+
+        if(SharedData.UnlockSkin[0] == 0)
+        {
+            SharedData.ResetData();
+        }
     }
     private void Update()
     {
