@@ -1556,7 +1556,7 @@ RectTransform:
   - {fileID: 1222482409}
   - {fileID: 621376630}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -1924,6 +1924,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -4880037233104227038, guid: de69a1098100c064d8a33b15449dfbf2,
+        type: 3}
+      propertyPath: increaseSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1282402019010172065, guid: de69a1098100c064d8a33b15449dfbf2,
         type: 3}
       propertyPath: m_RootOrder
@@ -2092,12 +2097,22 @@ PrefabInstance:
     - target: {fileID: 861928774892098831, guid: 47243e335401f2d48a33796dd7b1c509,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 861928774892098831, guid: 47243e335401f2d48a33796dd7b1c509,
         type: 3}
       propertyPath: m_TagString
       value: Cat
+      objectReference: {fileID: 0}
+    - target: {fileID: 2999052061086419744, guid: 47243e335401f2d48a33796dd7b1c509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4735471810532833436, guid: 47243e335401f2d48a33796dd7b1c509,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 47243e335401f2d48a33796dd7b1c509, type: 3}
@@ -2258,7 +2273,7 @@ PrefabInstance:
     - target: {fileID: 4443504000995473153, guid: 8161ea2830d14c240a9d483db92802dc,
         type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 4443504000995473153, guid: 8161ea2830d14c240a9d483db92802dc,
         type: 3}

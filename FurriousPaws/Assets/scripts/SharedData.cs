@@ -17,6 +17,8 @@ static public class SharedData
 
     public static bool WasHit { get; set; }
 
+    public static bool PowerUp { get; set; }
+
     public static void SaveData()
     {
         PlayerPrefs.SetFloat("music volume", vol);

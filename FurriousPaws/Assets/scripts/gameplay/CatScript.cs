@@ -31,12 +31,36 @@ public class CatScript : MonoBehaviour
             rb.AddForce(jump * jumpForce, ForceMode.Impulse);
             isGrounded = false;
         }
+
+        if(SharedData.PowerUp == true)
+        {
+            StartCoroutine(PowerUpEffects());
+        }
     }
-   
-   
 
     void OnCollisionStay()
     {
         isGrounded = true;
+    }
+
+    private IEnumerator PowerUpEffects()
+    {
+        int count = transform.childCount;
+        for (int i = 0; i < count; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.gameObject.SetActive(true);
+        }
+
+        yield return new WaitForSeconds(6.5f);
+
+        for (int i = 0; i < count; i++)
+        {
+            Transform child = transform.GetChild(i);
+            child.gameObject.SetActive(false);
+        }
+
+        SharedData.PowerUp = false;
+
     }
 }

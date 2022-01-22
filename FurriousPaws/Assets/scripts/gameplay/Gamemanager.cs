@@ -27,6 +27,7 @@ public class Gamemanager : MonoBehaviour
     {
         SharedData.PlayerScore = 0;
         SharedData.WasHit = false;
+        SharedData.PowerUp = false;
         currentSkinCount = SharedData.CatSkin;
         music = GetComponent<AudioSource>();
         switch(currentSkinCount)

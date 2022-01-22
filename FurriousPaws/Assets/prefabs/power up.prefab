@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4850629733666366756}
   m_Layer: 0
   m_Name: power up
-  m_TagString: Untagged
+  m_TagString: powerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -111,3 +111,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.8
+  increaseSpeed: 0.6

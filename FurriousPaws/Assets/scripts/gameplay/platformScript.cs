@@ -5,6 +5,7 @@ using UnityEngine;
 public class platformScript : MonoBehaviour
 {
     public float speed;
+    public float increaseSpeed;
     void Update()
     {
         transform.position = new Vector3(transform.position.x - Time.deltaTime * speed, transform.position.y, transform.position.z);
@@ -15,6 +16,7 @@ public class platformScript : MonoBehaviour
         if(other.tag == "Cat")
         {
             SharedData.PlayerScore += 123;
+             speed += increaseSpeed;
         }
         
     }
