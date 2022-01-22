@@ -15,6 +15,8 @@ static public class SharedData
     public static float CatSkin { get { return currentSkin; } set { currentSkin = value; } }
     public static int[] UnlockSkin { get { return unlockedSkins; } set { unlockedSkins = value; } }
 
+    public static bool WasHit { get; set; }
+
     public static void SaveData()
     {
         PlayerPrefs.SetFloat("music volume", vol);

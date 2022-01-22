@@ -19,9 +19,14 @@ public class Gamemanager : MonoBehaviour
     public Text finalScore;
     public Text prevScore;
 
+    public GameObject advert;
+    public Text advertTimer;
+    private float timer = 5;
+
     private void Start()
     {
         SharedData.PlayerScore = 0;
+        SharedData.WasHit = false;
         currentSkinCount = SharedData.CatSkin;
         music = GetComponent<AudioSource>();
         switch(currentSkinCount)
@@ -77,6 +82,10 @@ public class Gamemanager : MonoBehaviour
     private void Update()
     {
         music.volume = SharedData.MusicVol;
+        if(SharedData.WasHit == true)
+        {
+            GameOver();
+        }
     }
 
     public void GameOver()
@@ -84,13 +93,38 @@ public class Gamemanager : MonoBehaviour
         finalScore.text = SharedData.PlayerScore.ToString();
         prevScore.text = PlayerPrefs.GetFloat("score").ToString();
         gameOverScreen.SetActive(true);
+        Advert();
     }
 
     public void BackToMenu()
     {
         SharedData.SaveData();
-        SharedData.PlayerScore = 0;
         gameOverScreen.SetActive(false);
+        SharedData.WasHit = false;
+        SharedData.PlayerScore = 0;
         SceneManager.LoadScene(0);
+    }
+
+    private void Advert()
+    {
+        if(advert != null)
+        {
+            timer -= Time.deltaTime;
+            advert.SetActive(true);
+            advertTimer.text = ((int)timer).ToString();
+            if (timer <= 0)
+            {
+                timer = 0;
+            }
+        }
+    }
+
+    public void SkipAdvert()
+    {
+        if(timer <= 0)
+        {
+            Destroy(advert);
+            timer = 5;
+        }
     }
 }

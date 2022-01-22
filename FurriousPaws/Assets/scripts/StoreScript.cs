@@ -154,7 +154,7 @@ public class StoreScript : MonoBehaviour
 
     private void UnlockCat(int skinNum)
     {
-        if (SharedData.PlayerScore >= 10) //set to 10 platforms / score currently as a test
+        if (PlayerPrefs.GetFloat("score") >= 400) 
         {
             SharedData.CatSkin = skinNum;
             SharedData.UnlockSkin[skinNum] = 1;

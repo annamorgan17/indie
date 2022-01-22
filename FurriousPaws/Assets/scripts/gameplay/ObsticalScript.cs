@@ -5,12 +5,11 @@ using UnityEngine;
 public class ObsticalScript : MonoBehaviour
 {
     public float speed;
-    public Gamemanager GM;
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Cat")
         {
-            GM.GameOver();
+            SharedData.WasHit = true;
         }
     }
 
