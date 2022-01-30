@@ -118,7 +118,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 1.6
-  increaseSpeed: 0.5
+  increaseSpeed: 0.1
 --- !u!135 &435014296941632953
 SphereCollider:
   m_ObjectHideFlags: 0
